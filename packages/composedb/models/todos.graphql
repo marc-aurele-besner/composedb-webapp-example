@@ -1,0 +1,7 @@
+type Todo @loadModel(id: "[modelName:todo]") {
+  id: ID!
+}
+
+type Profile @loadModel(id: "[modelName:profile]") {
+  todos: [Comment] @relationFrom(model: "Comment", property: "postID")
+}

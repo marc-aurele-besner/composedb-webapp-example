@@ -1,6 +1,6 @@
-type Todo
-  @createModel(accountRelation: LIST, description: "Todo item") {
-  content: String! @string(minLength: 1, maxLength: 200)
+type Todo @createModel(accountRelation: LIST, description: "Todo item") {
+  title: String! @string(minLength: 1, maxLength: 200)
+  description: String! @string(minLength: 1, maxLength: 200)
   status: String! @string(minLength: 1, maxLength: 200)
   tags: String! @string(minLength: 1, maxLength: 200)
 }

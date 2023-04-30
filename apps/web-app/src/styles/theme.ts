@@ -28,15 +28,33 @@ const theme = extendTheme({
       }
     })
   },
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   components: {
     Card: defineStyleConfig({
-      baseStyle: {
+      baseStyle: ({ colorMode }) => ({
         borderRadius: 10,
         fontSize: 'sm',
         boxShadow: 'dark-lg',
-        bgGradient: ['linear(to-r, gray.500, gray.700)']
+        bgGradient: colorMode === 'light' ? ['linear(to-r, gray.400, gray.600)'] : ['linear(to-r, gray.600, gray.800)']
+      }),
+      sizes: {
+        sm: {
+          fontSize: 'sm'
+        },
+        md: {
+          fontSize: 'md'
+        }
       },
+      defaultProps: {
+        size: 'md'
+      }
+    }),
+    BigCard: defineStyleConfig({
+      baseStyle: ({ colorMode }) => ({
+        borderRadius: 10,
+        fontSize: 'sm',
+        boxShadow: 'dark-lg',
+        bgGradient: colorMode === 'light' ? ['linear(to-r, gray.300, gray.500)'] : ['linear(to-r, gray.500, gray.700)']
+      }),
       sizes: {
         sm: {
           fontSize: 'sm'

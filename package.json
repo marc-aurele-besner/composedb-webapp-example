@@ -1,0 +1,35 @@
+{
+  "name": "composedb-webapp-example",
+  "version": "1.0.0",
+  "description": "Small example of a web app using composeDB",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marc-aurele-besner/composedb-webapp-example.git"
+  },
+  "author": "Marc-Aurele Besner <82244926+marc-aurele-besner@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marc-aurele-besner/composedb-webapp-example/issues"
+  },
+  "homepage": "https://github.com/marc-aurele-besner/composedb-webapp-example#readme",
+  "scripts": {
+    "dev": "lerna run dev",
+    "build": "lerna run build"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "@types/node": "^18.16.3",
+    "eslint": "^8.39.0",
+    "husky": "^8.0.3",
+    "lerna": "^6.6.1",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  }
+}

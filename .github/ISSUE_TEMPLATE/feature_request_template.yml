@@ -1,0 +1,41 @@
+name: Request feature
+description: Request a feature, explain it's use case
+title: 'feature: <title>'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        👋 Thank you for submitting a feature request! 🔮✨ We appreciate your input and will take it into consideration as we continue to improve our product. 🚀👍 If you have any additional details or ideas to share, please feel free to let us know! 💡📝 If you are a [sponsor](https://github.com/sponsors/marc-aurele-besner), please note that your issues will be given priority. 👑
+
+  - type: checkboxes
+    attributes:
+      label: Is there an existing feature request for this?
+      description: Please search to see if an issue already exists for this feature request.
+      options:
+        - label: I have searched the existing issues
+          required: true
+
+  - type: textarea
+    attributes:
+      label: Detail on the feature requested
+      description: A concise description of what you feature request
+    validations:
+      required: false
+
+  - type: checkboxes
+    attributes:
+      label: Can you contribute to the development and implementation of this feature?
+      description: Please tell us if you plan on contributing to the development and implementation of this feature.
+      options:
+        - label: I can contribute to this feature development and implementation
+          required: true
+
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: |
+        Browser info? Screenshots? Anything that will give us more context about this feature request!
+
+        Tip: You can attach images by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false

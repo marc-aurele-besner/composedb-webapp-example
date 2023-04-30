@@ -19,13 +19,14 @@ const ImageButton: React.FC<ImageButtonProps> = ({ placeholder, imagePath, onCli
       mt={4}
       borderRadius={10}
       color='gray.700'
-      bg='gray.100'
+      bg='gray.300'
       boxShadow='dark-lg'
       onClick={onClick}
       isLoading={isLoading}
       isDisabled={isDisabled}
       _hover={{
-        bg: 'gray.300'
+        bg: 'gray.400',
+        color: 'dark.700'
       }}>
       <HStack w='100%' justifyContent='center'>
         <Image src={imagePath} alt={placeholder} width={25} height={25} borderRadius='3px' />

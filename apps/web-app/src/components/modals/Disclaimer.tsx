@@ -48,7 +48,7 @@ const Disclaimer: React.FC = () => {
         </ModalBody>
 
         <ModalFooter>
-          <Button colorScheme='blue' mr={3} onClick={onClose}>
+          <Button colorScheme='blackAlpha' mr={3} onClick={onClose}>
             I understand
           </Button>
         </ModalFooter>

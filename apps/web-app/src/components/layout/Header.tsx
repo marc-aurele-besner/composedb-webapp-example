@@ -49,7 +49,12 @@ const HeaderBox: React.FC = () => {
             {menu.map((item) => (
               <HeaderLink key={`Link-${item.name}`} name={item.name} link={item.link} imagePath={item.imagePath} />
             ))}
-            <Button onClick={toggleColorMode}>Toggle {colorMode === 'light' ? 'Dark' : 'Light'}</Button>
+            <Button
+              colorScheme={colorMode === 'light' ? 'blackAlpha' : 'whiteAlpha'}
+              color='white'
+              onClick={toggleColorMode}>
+              Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+            </Button>
           </Fragment>
         ) : (
           <Box ml='2rem'>

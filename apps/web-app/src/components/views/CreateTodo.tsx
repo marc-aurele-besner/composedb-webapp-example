@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Center, VStack, Text, FormControl, FormLabel, Input, FormHelperText, Tag, Button } from '@chakra-ui/react'
 
 import BigCard from '../layout/BigCard'
+import useCompose from '../../hooks/useCompose'
 
 type Values = {
   title: string
@@ -10,6 +11,10 @@ type Values = {
 }
 
 const CreateTodo: React.FC = () => {
+  const addNewTodo = useCompose((state) => state.addNewTodo)
+
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [isAdded, setIsAdded] = useState<boolean>(false)
   const [values, setValues] = useState<Values>({
     title: '',
     description: '',
@@ -20,6 +25,19 @@ const CreateTodo: React.FC = () => {
     setValues({ ...values, [field]: event.target.value })
 
   const tagsList = values.tags.split(',')
+
+  const handleSubmit = () => {
+    setIsLoading(true)
+    addNewTodo(values.title, values.description, 'pending', values.tags)
+      .then((res) => {
+        setIsLoading(false)
+        setIsAdded(true)
+      })
+      .catch((err) => {
+        console.error('err', err)
+        setIsLoading(false)
+      })
+  }
 
   return (
     <Center>
@@ -58,7 +76,14 @@ const CreateTodo: React.FC = () => {
               <Input type='tag' onChange={(e) => handleChange('tags', e)} />
               <FormHelperText>Please select a tag.</FormHelperText>
             </FormControl>
-            <Button colorScheme='whiteAlpha'>Add Todo</Button>
+            {isAdded && (
+              <Text fontSize='2xl' fontWeight='bold' pb='1rem' color='green.500'>
+                Todo Added
+              </Text>
+            )}
+            <Button colorScheme='whiteAlpha' isLoading={isLoading} onClick={handleSubmit}>
+              Add Todo
+            </Button>
           </VStack>
         </Center>
       </BigCard>

@@ -34,7 +34,6 @@ const AllTodos: React.FC = () => {
   const did = useCompose((state) => state.did)
   const getAllTodos = useCompose((state) => state.getAllTodos)
   const changeTodoStatus = useCompose((state) => state.changeTodoStatus)
-  const removeTodo = useCompose((state) => state.removeTodo)
 
   const loadAllTodos = async () => {
     const queryAllTodos = await getAllTodos()
@@ -43,16 +42,6 @@ const AllTodos: React.FC = () => {
 
   const handleChangeStatus = async (id: string, status: string) => {
     changeTodoStatus(id, status)
-      .then((res) => {
-        loadAllTodos()
-      })
-      .catch((err) => {
-        console.error('err', err)
-      })
-  }
-
-  const handleRemoveTodo = async (id: string) => {
-    removeTodo(id)
       .then((res) => {
         loadAllTodos()
       })

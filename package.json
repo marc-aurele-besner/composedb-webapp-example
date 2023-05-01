@@ -18,7 +18,8 @@
   "homepage": "https://github.com/marc-aurele-besner/composedb-webapp-example#readme",
   "scripts": {
     "dev": "lerna run dev",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "test": "lerna run test"
   },
   "keywords": [],
   "devDependencies": {

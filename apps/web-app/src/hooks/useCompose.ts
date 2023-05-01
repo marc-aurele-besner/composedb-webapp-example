@@ -7,7 +7,8 @@ import { ComposeClient } from '@composedb/client'
 import type { RuntimeCompositeDefinition } from '@composedb/types'
 
 import { Todos } from '../models'
-import { definition } from '../constants/allModels'
+// @ts-ignore
+import { definition } from 'composedb/.generated/definitions/allModels'
 
 interface ComposeStates {
   isConnectionLoading: boolean

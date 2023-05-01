@@ -16,7 +16,6 @@
   "homepage": "https://github.com/marc-aurele-besner/composedb-webapp-example#readme",
   "scripts": {
     "start": "next stat",
-    "prepare": "husky install",
     "dev": "next dev",
     "build": "next build ",
     "lint": "next build lint",
@@ -39,6 +38,7 @@
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
     "@wagmi/core": "^0.10.10",
+    "composedb": "*",
     "did-session": "^2.0.1",
     "emotion-theming": "10.3.0",
     "ethers": "5.7.2",

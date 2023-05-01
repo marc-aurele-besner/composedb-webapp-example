@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Text } from '@chakra-ui/react'
 import { useConnect } from 'wagmi'
 
@@ -7,8 +7,9 @@ import ImageButton from '../buttons/ImageButton'
 
 const ConnectWallet: React.FC = () => {
   const { connect, connectors, error, isLoading, pendingConnector } = useConnect()
+
   return (
-    <Fragment>
+    <>
       <Text fontSize='2xl' fontWeight='bold' pt='2rem' pb='2rem'>
         Connect your wallet
       </Text>
@@ -40,9 +41,8 @@ const ConnectWallet: React.FC = () => {
         isLoading={isLoading && pendingConnector && pendingConnector.id === 'injected'}
         isDisabled={isLoading && pendingConnector && pendingConnector.id !== 'injected'}
       />
-
       {error && <ErrorCard>{error.message}</ErrorCard>}
-    </Fragment>
+    </>
   )
 }
 

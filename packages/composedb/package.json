@@ -20,7 +20,7 @@
   "homepage": "https://github.com/marc-aurele-besner/composedb-webapp-example#readme",
   "scripts": {
     "dev": "bash ./scripts/run-dev.sh",
-    "build": "bash ./scripts/build-composite.sh",
+    "build": "bash ./scripts/run-dev.sh & sleep 10 && bash ./scripts/build-composite.sh &",
     "start:graphql": "bash ./scripts/start-graphql.sh",
     "clean": "bash ./scripts/clean.sh"
   },

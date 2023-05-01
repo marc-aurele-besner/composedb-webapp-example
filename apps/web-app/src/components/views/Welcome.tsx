@@ -22,10 +22,10 @@ const Welcome: React.FC = () => {
         <Center>
           <VStack>
             <Text fontSize='2xl' fontWeight='bold' pb='1rem'>
-              Welcome to MyMultiSig.app
+              Welcome to a minimalistic WebApp
             </Text>
             <Text fontSize='xl' fontWeight='bold' m='4rem' pt='2rem'>
-              A ComposeDB WebApp Example
+              A ComposeDB To-Do WebApp Example
             </Text>
             {hasMounted && <>{!isConnected ? <ConnectWallet /> : <ConnectedWallet />}</>}
           </VStack>

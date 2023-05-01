@@ -11,6 +11,12 @@ Install dependencies:
 pnpm install
 ```
 
+Build the composite and the Ceramic node in parallel:
+
+```bash
+pnpm build
+```
+
 Start the Ceramic daemon:
 
 ```bash

@@ -18,7 +18,8 @@ const theme = extendTheme({
         lineHeight: 'tall',
         fontFamily: 'Roboto, sans-serif',
         height: 'fit-content',
-        minHeight: '100vh'
+        minHeight: '100vh',
+        maxHeight: '100vh'
       },
       a: {
         color: mode('#000000', '#ffffff')(props),
@@ -34,7 +35,8 @@ const theme = extendTheme({
         borderRadius: 10,
         fontSize: 'sm',
         boxShadow: 'dark-lg',
-        bgGradient: colorMode === 'light' ? ['linear(to-r, gray.400, gray.600)'] : ['linear(to-r, gray.600, gray.800)']
+        bgGradient: colorMode === 'light' ? ['linear(to-r, gray.400, gray.600)'] : ['linear(to-r, gray.600, gray.800)'],
+        height: 'fit-content'
       }),
       sizes: {
         sm: {
@@ -53,7 +55,10 @@ const theme = extendTheme({
         borderRadius: 10,
         fontSize: 'sm',
         boxShadow: 'dark-lg',
-        bgGradient: colorMode === 'light' ? ['linear(to-r, gray.300, gray.500)'] : ['linear(to-r, gray.500, gray.700)']
+        bgGradient: colorMode === 'light' ? ['linear(to-r, gray.300, gray.500)'] : ['linear(to-r, gray.500, gray.700)'],
+        height: 'fit-content',
+        minHeight: '100vh',
+        maxHeight: '100vh'
       }),
       sizes: {
         sm: {

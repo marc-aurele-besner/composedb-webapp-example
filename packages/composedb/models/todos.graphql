@@ -3,5 +3,5 @@ type Todo @loadModel(id: "[modelName:todo]") {
 }
 
 type Profile @loadModel(id: "[modelName:profile]") {
-  todos: [Comment] @relationFrom(model: "Comment", property: "postID")
+  todos: [Todo] @relationFrom(model: "Todo", property: "todoID")
 }

@@ -33,6 +33,6 @@
     "@composedb/devtools": "^0.4.4",
     "@composedb/devtools-node": "^0.4.4",
     "fs": "0.0.1-security",
-    "prettier": "^2.8.8"
+    "prettier": "^3.0.0"
   }
 }

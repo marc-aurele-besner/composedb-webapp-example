@@ -41,7 +41,7 @@
     "composedb": "*",
     "did-session": "^2.0.1",
     "emotion-theming": "11.0.0",
-    "ethers": "5.7.2",
+    "ethers": "6.6.3",
     "framer-motion": "^10.12.4",
     "next-pwa": "^5.6.0",
     "react": "^18.2.0",

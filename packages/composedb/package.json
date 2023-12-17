@@ -25,7 +25,7 @@
     "clean": "bash ./scripts/clean.sh"
   },
   "dependencies": {
-    "@ceramicnetwork/cli": "^2.29.0",
+    "@ceramicnetwork/cli": "^3.0.0",
     "@composedb/cli": "^0.4.4",
     "@glazed/cli": "^0.2.2"
   },

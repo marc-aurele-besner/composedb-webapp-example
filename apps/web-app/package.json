@@ -24,7 +24,7 @@
     "analyze": "ANALYZE=true turbo build"
   },
   "dependencies": {
-    "@ceramicnetwork/common": "^2.24.0",
+    "@ceramicnetwork/common": "^5.0.0",
     "@ceramicnetwork/http-client": "^5.0.0",
     "@chakra-ui/color-mode": "^2.1.11",
     "@chakra-ui/core": "^0.8.0",

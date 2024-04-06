@@ -30,7 +30,7 @@
     "@glazed/cli": "^0.2.2"
   },
   "devDependencies": {
-    "@composedb/devtools": "^0.4.4",
+    "@composedb/devtools": "^0.7.0",
     "@composedb/devtools-node": "^0.7.0",
     "fs": "0.0.1-security",
     "prettier": "^3.0.0"

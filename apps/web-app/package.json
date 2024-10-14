@@ -48,7 +48,7 @@
     "react-dom": "^18.2.0",
     "react-merge-refs": "^2.0.1",
     "wagmi": "^2.0.0",
-    "zustand": "^4.3.7"
+    "zustand": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.5",
